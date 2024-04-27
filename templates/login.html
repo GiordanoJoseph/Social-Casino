@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <!-- Dynamically link to the CSS file based on the client name -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/' + client_name + '.css') }}">
+</head>
+<body>
+    <h1>Welcome to {{ client_name | capitalize }}!</h1>
+    <p>Please log in to continue.</p>
+    
+    <!-- Display error message if there is an error -->
+    {% if error %}
+    <div style="color: red;">
+        {{ error }}
+    </div>
+    {% endif %}
+    
+    <!-- Login form -->
+    <form action="{{ url_for('login') }}" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <button type="submit">Log In</button>
+        </div>
+    </form>
+</body>
+</html>

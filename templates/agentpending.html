@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agent Pending</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/' + client_name + '.css') }}">
+</head>
+<body>
+    <h1>Agent Pending</h1>
+    <p>Username: {{ session.username }}</p>
+    <p>Password: {{ session.password }}</p>
+    <p>Role: {{ session.role }}</p>
+    <p>Commission: {{ session.commission }}</p>
+    <p>Risk: {{ session.risk }}</p>
+    <p>Can Manage Players: {{ session.can_manage_players }}</p>
+    <p>Can Create Agents: {{ session.can_create_agents }}</p>
+    <p>Agent Username: {{ session.agent_username }}</p>
+
+    <!-- Menu Buttons -->
+    <a href="{{ url_for('agent_dashboard') }}" class="menu-button">Dashboard</a>
+    <a href="{{ url_for('agent_account_management') }}" class="menu-button">Account Management</a>
+    <a href="{{ url_for('agent_collections') }}" class="menu-button">Collections</a>
+</body>
+</html>

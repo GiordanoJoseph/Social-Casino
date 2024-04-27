@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Account Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/' + client_name + '.css') }}">
+</head>
+<body>
+    <h1>Admin Account Management</h1>
+    <p>Username: {{ session.username }}</p>
+    <p>Password: {{ session.password }}</p>
+    <p>Role: {{ session.role }}</p>
+
+    <!-- Menu Buttons -->
+    <a href="{{ url_for('admin_dashboard') }}" class="menu-button">Dashboard</a>
+    <a href="{{ url_for('admin_account_management') }}" class="menu-button">Account Management</a>
+    <a href="{{ url_for('admin_collections') }}" class="menu-button">Collections</a>
+    <a href="{{ url_for('admin_analytics') }}" class="menu-button">Analytics</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/' + client_name + '.css') }}">
+</head>
+<body>
+    <h1>Player Dashboard</h1>
+    <p>Username: {{ session.username }}</p>
+    <p>Password: {{ session.password }}</p>
+    <p>Role: {{ session.role }}</p>
+    <p>Credit Limit: {{ session.credit_limit }}</p>
+    <p>Wager Limit: {{ session.wager_limit }}</p>
+    <p>Max Payout: {{ session.max_payout }}</p>
+    <p>Free Play Balance: {{ session.free_play_balance }}</p>
+    <p>Balance: {{ session.balance }}</p>
+    <p>Pending Amount: {{ session.pending_amount }}</p>
+    <p>Table Games Access: {{ session.table_games_access }}</p>
+    <p>Live Dealer Access: {{ session.live_dealer_access }}</p>
+    <p>Horses Games: {{ session.horses_access }}</p>
+    <p>Sportsbook Access: {{ session.sportsbook_access }}</p>
+    <p>Agent Username: {{ session.agent_username }}</p>
+</body>
+</html>
